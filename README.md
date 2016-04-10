@@ -2,6 +2,7 @@
 
 a [Sails](http://sailsjs.org) application
 
+```
 nvm use 4.2.2
 sails --version
 0.12.3
@@ -14,16 +15,23 @@ npm install db-migrate-pg --save-dev
 npm install sails-db-migrate --save-dev
 
 echo "module.exports = require('sails-db-migrate').gruntTasks;" >> tasks/register/dbMigrate.js
+
 createdb sailsdbtest
+```
 
 in `config/migrations.js`:
+
+```
 module.exports.migrations = {
   connection: 'postgresql'
 };
+```
 
+```
 grunt db:migrate:create --name add-pets
 
 grunt db:migrate:up
+
 Running "db:migrate:up" (db:migrate) task
 + db-migrate up
 DATABASE_URL=postgres://localhost/sailsdbtest
@@ -38,4 +46,5 @@ From previous event:
     at processImmediate [as _immediateCallback] (timers.js:383:17)
 
 [INFO] Done
+```
 
