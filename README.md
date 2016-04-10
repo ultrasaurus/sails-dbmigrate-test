@@ -29,7 +29,11 @@ module.exports.migrations = {
 
 ```
 grunt db:migrate:create --name add-pets
+```
 
+## Warning with Grunt task
+
+```
 grunt db:migrate:up
 
 Running "db:migrate:up" (db:migrate) task
@@ -48,3 +52,11 @@ From previous event:
 [INFO] Done
 ```
 
+
+## No Warning with db-migrate
+
+```
+./node_modules/db-migrate/bin/db-migrate up
+```
+
+database.json uses `pg` driver
